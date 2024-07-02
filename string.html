@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .app-heading{
+            text-align: center;
+        }
+        .text-container{
+            display: flex;
+            justify-content: space-around;
+        }
+        .input1{
+            width:250px;
+            height:100px;
+        }
+        .match-result{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+      <h1 class="app-heading">String Comparision</h1>
+      <div class="text-container">
+        <input type="text" class="input1" id="input-num1" onkeyup="comText()" />
+        <input type="text" class="input1" id="input-num2" onkeyup="comText()" />
+      </div>
+      <p class="match-result" id="match-result-text"></p>
+    </div>
+    <script>
+        function comText(){
+            const num1Element=document.getElementById("input-num1");
+            const num2Element=document.getElementById("input-num2");
+            const resultElement=document.getElementById("match-result-text");
+            if(num1Element.value==num2Element.value){
+                resultElement.innerText="Matched !!!";
+                resultElement.style.color="green";
+            }
+            else{
+                 resultElement.innerText=" NotMatched !!!";
+                 resultElement.style.color="pink";
+                 
+                 
+            }
+        }
+    </script>
+</body>
+</html>
